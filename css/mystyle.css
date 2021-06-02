@@ -1,0 +1,362 @@
+/* ----Google-fonts---- */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+/* ----RESET styles---- */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  /* scroll-behavior: smooth; */
+}
+body{
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  background: #fff;
+  color: #333;
+}
+a{
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+}
+img{
+  width: 100%;
+}
+h1,h2{
+  font-weight: 300px;
+  line-height: 1.2;
+}
+p{
+  margin: 10px 0;
+}
+
+/* -----UTILITY styles--- */
+.text-primary{
+  color: #28a745;
+}
+.text-secondary{
+  color: #0284d0;
+}
+.bg-primary{
+  background: #28a745;
+  color: #fff;
+}
+.bg-light, .bnt-light{
+  background: #f4f4f4;
+  color: #333;
+}
+.bg-dark{
+  background: #333;
+  color: #f4f4f4;
+}
+.btn-secondary, .bg-secondary{
+  background: #0284d0;
+  color: #fff;
+}
+.btn{
+  display: inline-block;
+  padding: 10px 30px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background: #28a745;
+  color: #fff;
+}
+.btn:hover{
+  background: #28a745;
+  opacity: 0.9;
+}
+.btn-light{
+  background: #fff;
+  color: #333;
+}
+.btn-dark{
+  background: #333;
+  color: #fff;
+}
+.btn-outline{
+  background: transparent;
+  border: 1px solid #fff;
+}
+.section-padding{
+  padding: 20px 20px 40px;
+}
+.section-header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+}
+
+/* ------HEADER-menu----- */
+#navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  padding: 0 30px;
+  background: #333;
+  color: #fff;
+  opacity: 0.8;
+  transition: 0.5s;
+}
+#navbar.transparent-menu{
+  background: transparent;
+}
+
+#navbar nav ul{
+  display: flex;
+}
+#navbar nav a{
+  padding: 15px;
+  color: #fff;
+}
+#navbar nav a:hover{
+  border-bottom: 2px solid #28a745;
+}
+#navbar .logo{
+  font-weight: 400px;
+}
+.main{
+  background: url('../images/bg/bg-1.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+  /* This is parent' position, need to be relative, to make chil's 'position:absolute' */
+}
+/* we gonna create 'overlay'. To do that we need to use psudo-selector. Psudo-selector allows us to insert content 'before/after' an element. Then use a color with a bit 'rgba-value' or opecity(transperant) to make the background image little bit vissible through the color, that call 'overlay' */
+.main::before{
+  content: '';
+  position: absolute;
+  /* If we wanna place a position as 'absolute' within a parent, then parnet's positon has to be 'relative' */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+.main *{
+  z-index: 10;
+}
+
+/* --------HEADER-home------ */
+.content{
+  height: 100%;
+  /* Because parent has '100vh', so, we need child-height 100% of that(parent) container to have full view */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+.content h1{
+  font-size: 50px;
+}
+.content p{
+  font-size: 20px;
+  max-width: 600px;
+  margin: 30px;
+}
+
+/* ------SECTION-about-icon-----"FLEX-ITEMS"----- */
+#about{
+  padding: 30px;
+}
+.flex-items{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+/* Here 'div' is direct child of "flext-items" class and it targets all 3 'div' as child */
+.flex-items > div{
+  padding: 0 20px;
+}
+.flex-items i{
+  padding: 1rem;
+  background: #28a745;
+  color: #fff;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+.flex-items i:hover{
+  opacity: 0.8;
+}
+.flex-items p{
+  margin-bottom: 30px;
+}
+
+/* ------SECTION-about-content-----"FLEX-CONTENT" */
+.flex-content .row{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* By default it already 'row', but we gonna wrap it and it is readdable when it is shown that it s 'row' */
+}
+.flex-content .column{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  /* It means both flex-element will grow equally(length).
+  The 'flex' property is a shorthand property for the flex-grow, flex-shrink, and flex-basis properties. ex- 1 0 100%*/
+}
+.flex-content .column .column-1,
+.flex-content .column .column-2{
+  height: 100%;
+}
+.flex-content img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.flex-content .column-2{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 30px;
+}
+.flex-content .column-2 h4{
+  margin-bottom: 10px;
+}
+.flex-content .column-2 h2{
+  font-size: 40px;
+  font-weight: 100;
+}
+.flex-content .column-2 p{
+  margin: 20px 0;
+}
+
+/* ------SECTION-gallery----- */
+#gallery .section-header h4{
+  margin-bottom: 10px;
+}
+#gallery .section-header h2{
+  font-size: 40px;
+  margin: 20px;
+}
+#gallery .row{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+#gallery .column{
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+#gallery .column img{
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+}
+#gallery img:hover{
+  opacity: 0.7;
+}
+
+/* -----SECTION-blog---- */
+/* WE used same 'FLEX-BOX' style from 'SECTION-about-content' */
+
+/* ------SECTION-team----- */
+#team .section-header h4{
+  margin-bottom: 10px;
+}
+#team .section-header h2{
+  font-size: 40px;
+  margin: 20px;
+}
+#team img{
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* ------SECTION-contact----- */
+#contact .form-group{
+  width: 100%;
+  padding: 20px 0;
+}
+#contact .form-control{
+  margin-bottom: 20px;
+}
+#contact label{
+  display: block;
+}
+#contact input, #contact textarea{
+  width: 100%;
+  /* height: 40px; */
+  padding: 10px;
+  border: 1px solid #f5f5f5;
+}
+#contact input:focus, #contact textarea:focus{
+  border-color: #28a745;
+  outline: none;
+  /* 'outline:none' allows to strech the button */
+}
+#contact .bnt{
+  padding: 12px 0;
+  margin-top: 20px;
+}
+
+/* ------BLOG-PAGE----- */
+.main.blog{
+  background: url('../images/bg/bg-1.jpg') no-repeat;
+  height: 35vh;
+}
+
+/* -----BLOG-POST PAGE----- */
+.blog-post{
+  padding: 50px 30px;
+}
+.blog-post h2{
+  font-size: 40px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.blog-post img{
+  display: block;
+  margin: 0 auto 30px;
+  /* top:0,right&left:auto,bottom:30 */
+  width: 300px;
+  border-radius: 50%;
+}
+.blog-post p{
+  /* margin-top: 20px; */
+}
+.blog-post a{
+  margin-top: 20px;
+}
+
+/* -------FOOTER----- */
+#footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 150px;
+}
+#footer a{
+  color: #fff;
+}
+#footer a:hover{
+  color: #28a745;
+}
+#footer .social > *{
+  margin-right: 30px;
+  /* This '>' sign indicates parent(social) element targets all the child(icons) element*/
+}

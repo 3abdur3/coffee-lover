@@ -1,0 +1,32 @@
+/* ------NAVBAR/MENU----- */
+#navbar{
+  flex-direction: column;
+  height: 120px;
+  padding: 20px;
+}
+#navbar nav a{
+  padding: 10px 10px;
+  margin: 0 3px;
+}
+
+/* -------SECTION-ABOUT-ICONS----- */
+.flex-items{
+  flex-direction: column;
+}
+
+/* -----SECTION-about-content---- */
+.flex-content .column, #gallery .column{
+  flex:100%;
+  max-width: 100%;
+}
+.flex-content img, #gallery .column img {
+  height: auto;
+}
+
+/* ------BLOG and BLOG-POST---- */
+.main.blog{
+  height: 25vh;
+}
+.blog .content h1{
+  display: none;
+}

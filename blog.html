@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to coffee lover club in Belgium">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/mystyle.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
+
+    <!-- JS -->
+    <!-- <script type="text/javascript" src="mystyle.js"></script> -->
+
+    <!-- Fontawsome 5.15 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA==" crossorigin="anonymous" />
+
+    <!-- FAVICON-ICON -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+
+    <title>Our Blog Page</title>
+  </head>
+  <body>
+    <header class="main blog">
+
+                  <!-- MENU -->
+      <div id="navbar" class="menu-styling transparent-menu">
+        <h1 class="logo">
+          <span class="text-primary"><i class="fas fa-mug-hot"></i> Coffee</span>Lover
+        </h1>
+          <!-- <a href="#"><img src="images/logo.png" alt=""></a> -->
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#gallery">Gallery</a></li>
+            <li><a href="index.html#blog">Blog</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+                <!-- HOME-page -->
+      <div class="content">
+        <h1>Blog</h1>
+      </div>
+    </header>
+
+
+          <!-- SECTION-blog -->
+    <article class="flex-content">
+      <div class="row">
+        <div class="column">
+          <div class="column-2 bg-dark">
+              <h2>Blog Post One</h2>
+              <p><i class="fas fa-user"></i> By michael Kneip | May 20 2021</p[]>
+              <p>Worem learn dolor sit amet above consectetur snim minim veniam very nostrud to be good organ learn dolor.</p>
+              <a class="btn btn-light" href="post.html"><i class="fas fa-chevron-right"></i> Read More</a>
+          </div>
+        </div>
+        <div class="column">
+          <div class="column-1">
+              <img src="images/blog/blog-1.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="flex-content">
+      <div class="row">
+        <div class="column">
+          <div class="column-1">
+              <img src="images/blog/blog-2.jpg" alt="">
+          </div>
+        </div>
+        <div class="column">
+          <div class="column-2 bg-light">
+              <h2>Blog Post Two</h2>
+              <p><i class="fas fa-user"></i> By Paul Vermylen | May 20 2020<p4>
+              <p>Worem learn dolor sit amet above consectetur snim minim veniam very nostrud to be good organ learn dolor.</p>
+              <a class="btn btn-dark" href="post.html"><i class="fas fa-chevron-right"></i> Read More</a>
+          </div>
+        </div>
+
+      </div>
+    </article>
+    <article class="flex-content">
+      <div class="row">
+
+        <div class="column">
+          <div class="column-2 bg-dark">
+              <h2>Blog Post Three</h2>
+              <p><i class="fas fa-user"></i> By Gurcharan Singh | May 20 2019</p>
+              <p>Worem learn dolor sit amet above consectetur snim minim veniam very nostrud to be good organ learn dolor.</p>
+              <a class="btn btn-light" href="post.html"><i class="fas fa-chevron-right"></i> Read More</a>
+          </div>
+        </div>
+        <div class="column">
+          <div class="column-1">
+              <img src="images/blog/blog-3.jpg" alt="">
+          </div>
+        </div>
+
+      </div>
+    </article>
+    <article class="flex-content">
+      <div class="row">
+
+        <div class="column">
+          <div class="column-1">
+              <img src="images/blog/blog-4.jpg" alt="">
+          </div>
+        </div>
+        <div class="column">
+          <div class="column-2 bg-light">
+              <h2>Blog Post Four</h2>
+              <p><i class="fas fa-user"></i> By Abdur Rahman | May 20 2014</p>
+              <p>Worem learn dolor sit amet above consectetur snim minim veniam very nostrud to be good organ learn dolor.</p>
+              <a class="btn btn-dark" href="post.html"><i class="fas fa-chevron-right"></i> Read More</a>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+
+
+                <!-- FOOTER -->
+    <footer id="footer" class="bg-dark">
+      <div class="social">
+        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+        <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+        <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+        <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+      </div>
+      <p>Copyright &copy; 2021 - shu|pol</p>
+    </footer>
+
+                  <!-- JS -->
+
+    <script type="text/javascript">
+    const navbar = document.getElementById('navbar');
+
+    window.onscroll = function () {
+    if(window.pageYOffset > 100){
+    navbar.classList.remove('transparent-menu');
+    } else {
+    navbar.classList.add('transparent-menu');
+    }
+    }
+    </script>
+
+  </body>
+</html>
